@@ -1,0 +1,60 @@
+﻿@inject AuthenticationStateProvider AuthStateProvider
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid justify-content-center">
+        <a class="navbar-brand" href="">
+            <img src="coffee-logo.png" class="logo"/>
+            <div>Coffee Broswer</div>
+        </a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+
+        <AuthorizeView>
+            <Authorized>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" @onclick="Logout" style="cursor:pointer">
+                        <span class="bi bi-arrow-left-nav-menu" aria-hidden="true"></span> Logout
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="coffees">
+                        <span class="bi bi-cup-hot-nav-menu" aria-hidden="true"></span> Coffees
+                    </NavLink>
+                </div>
+            </Authorized>
+
+            <NotAuthorized>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" @onclick="Login" style="cursor:pointer">
+                        <span class="bi bi-arrow-right-nav-menu" aria-hidden="true"></span> Login
+                    </NavLink>
+                </div>
+            </NotAuthorized>
+        </AuthorizeView>
+    </nav>
+</div>
+
+
+@code {
+    private async Task Login()
+    {
+        var authStateProvider = (ICustomAuthStateProvider)AuthStateProvider;
+        await authStateProvider.LogInAsync();
+    }
+
+    private void Logout()
+    {
+        var authStateProvider = (ICustomAuthStateProvider)AuthStateProvider;
+        authStateProvider.Logout();
+    }
+}     

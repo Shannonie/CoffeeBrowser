@@ -1,0 +1,21 @@
+﻿@using System.Security.Claims
+@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="sidebar bg-dark">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4 bg-light">
+            <AuthorizeView>
+                Logged in: @context.User.Identity?.Name
+            </AuthorizeView>
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">Project Link</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
