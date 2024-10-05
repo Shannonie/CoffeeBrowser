@@ -17,12 +17,11 @@ public partial class App : Application
 #if DEBUG
         services.AddBlazorWebViewDeveloperTools();
 #endif
-        //dependency injection
+
         services.AddAuthorizationCore(); // configure authorization services
         services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
 
         services.AddTransient<ICoffeeService, CoffeeService>();
-        //dependency injection
 
         ServiceProvider serviceProvider = services.BuildServiceProvider();
         this.Resources.Add("ServiceProvider", serviceProvider);

@@ -1,6 +1,6 @@
 ﻿namespace CoffeeBrowser.Winforms
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            blazorWebView1 = new Microsoft.AspNetCore.Components.WebView.WindowsForms.BlazorWebView();
+            blazorWebView = new Microsoft.AspNetCore.Components.WebView.WindowsForms.BlazorWebView();
             SuspendLayout();
             // 
-            // blazorWebView1
+            // blazorWebView
             // 
-            blazorWebView1.Location = new Point(429, 154);
-            blazorWebView1.Name = "blazorWebView1";
-            blazorWebView1.Size = new Size(94, 29);
-            blazorWebView1.StartPath = "/";
-            blazorWebView1.TabIndex = 0;
-            blazorWebView1.Text = "blazorWebView1";
+            blazorWebView.Dock = DockStyle.Fill;
+            blazorWebView.Location = new Point(0, 0);
+            blazorWebView.Name = "blazorWebView";
+            blazorWebView.Size = new Size(800, 450);
+            blazorWebView.StartPath = "/";
+            blazorWebView.TabIndex = 0;
+            blazorWebView.Text = "blazorWebView1";
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(blazorWebView1);
-            Name = "Form1";
-            Text = "Form1";
+            Controls.Add(blazorWebView);
+            Name = "MainForm";
+            Text = "MainForm";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Microsoft.AspNetCore.Components.WebView.WindowsForms.BlazorWebView blazorWebView1;
+        private Microsoft.AspNetCore.Components.WebView.WindowsForms.BlazorWebView blazorWebView;
     }
 }

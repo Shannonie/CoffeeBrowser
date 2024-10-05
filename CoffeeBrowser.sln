@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeBrowser.Maui", "Coffe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeBrowser.WPF", "CoffeeBrowser.WPF\CoffeeBrowser.WPF.csproj", "{F1AA1379-BBF7-403D-BBF4-143718E0ECF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeBrowser.Winforms", "CoffeeBrowser.Winforms\CoffeeBrowser.Winforms.csproj", "{BBD22196-2405-4FF4-A77D-3E0B10CFC7BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeBrowser.Winforms", "CoffeeBrowser.Winforms\CoffeeBrowser.Winforms.csproj", "{BBD22196-2405-4FF4-A77D-3E0B10CFC7BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeBrowser.HRM", "CoffeeBrowser.HRM\CoffeeBrowser.HRM.csproj", "{0F702C5F-3E41-46C0-B4C1-DD773F5BBBFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,14 @@ Global
 		{BBD22196-2405-4FF4-A77D-3E0B10CFC7BE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BBD22196-2405-4FF4-A77D-3E0B10CFC7BE}.Release|x64.ActiveCfg = Release|Any CPU
 		{BBD22196-2405-4FF4-A77D-3E0B10CFC7BE}.Release|x64.Build.0 = Release|Any CPU
+		{0F702C5F-3E41-46C0-B4C1-DD773F5BBBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F702C5F-3E41-46C0-B4C1-DD773F5BBBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F702C5F-3E41-46C0-B4C1-DD773F5BBBFA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0F702C5F-3E41-46C0-B4C1-DD773F5BBBFA}.Debug|x64.Build.0 = Debug|Any CPU
+		{0F702C5F-3E41-46C0-B4C1-DD773F5BBBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F702C5F-3E41-46C0-B4C1-DD773F5BBBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F702C5F-3E41-46C0-B4C1-DD773F5BBBFA}.Release|x64.ActiveCfg = Release|Any CPU
+		{0F702C5F-3E41-46C0-B4C1-DD773F5BBBFA}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

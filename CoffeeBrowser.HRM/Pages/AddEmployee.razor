@@ -1,0 +1,23 @@
+﻿@page "/employees/addEmployee"
+@inject IDbContextFactory<EmployeeHRMDbContext> ContextFactory
+
+<PageTitle>Add Employee</PageTitle>
+
+<h1>Add Employee</h1>
+
+<EmployeeForm Employee="@Employee"
+    Departments="@Departments"
+    IsToEdit="false"
+    IsDbBusy="@IsDbBusy"
+    OnSubmit="@HandleSubmit"/>
+
+@if (SuccessMessage is not null)
+{
+    <br />
+    <div class="alert alert-success">@SuccessMessage</div>
+}
+@if (ErrorMessage is not null)
+{
+    <br />
+    <div class="alert alert-danger">@ErrorMessage</div>
+} 
